@@ -1,0 +1,14 @@
+{
+  "name": "network-mapping-platform",
+  "version": "1.0.0",
+  "description": "Enterprise-grade local Network Mapping & Patch Management Platform",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "build": "cd frontend && npm run build",
+    "dev:backend": "cd backend && node src/server.js",
+    "dev:frontend": "cd frontend && npm run dev"
+  },
+  "keywords": ["network-mapping", "patch-panel", "switch-management", "vlan", "dcim"],
+  "author": "Antigravity",
+  "license": "MIT"
+}
