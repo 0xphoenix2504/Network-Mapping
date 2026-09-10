@@ -53,10 +53,15 @@ app.get('*', (req, res, next) => {
   });
 });
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`====================================================`);
-  console.log(`🚀 Network Mapping Platform Backend is active!`);
-  console.log(`🌐 Local API URL: http://localhost:${PORT}`);
-  console.log(`📡 Network Drops API: http://localhost:${PORT}/api/drops`);
-  console.log(`====================================================`);
-});
+// Start standalone server if not running as serverless function
+if (require.main === module || (!process.env.VERCEL && !process.env.AWS_LAMBDA_FUNCTION_NAME)) {
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`====================================================`);
+    console.log(`🚀 Network Mapping Platform Backend is active!`);
+    console.log(`🌐 Local API URL: http://localhost:${PORT}`);
+    console.log(`📡 Network Drops API: http://localhost:${PORT}/api/drops`);
+    console.log(`====================================================`);
+  });
+}
+
+module.exports = app;
