@@ -9,6 +9,6 @@
     "dev:frontend": "cd frontend && npm run dev"
   },
   "keywords": ["network-mapping", "patch-panel", "switch-management", "vlan", "dcim"],
-  "author": "Antigravity",
+  "author": "Phoenix",
   "license": "MIT"
 }
