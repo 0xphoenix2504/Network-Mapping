@@ -2,13 +2,23 @@
   "name": "network-mapping-platform",
   "version": "1.0.0",
   "description": "Enterprise-grade local Network Mapping & Patch Management Platform",
-  "scripts": {
-    "start": "node backend/src/server.js",
-    "build": "cd frontend && npm run build",
-    "dev:backend": "cd backend && node src/server.js",
-    "dev:frontend": "cd frontend && npm run dev"
+  "engines": {
+    "node": ">=22.5.0"
   },
-  "keywords": ["network-mapping", "patch-panel", "switch-management", "vlan", "dcim"],
+  "scripts": {
+    "postinstall": "npm install --prefix backend && npm install --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "start": "node backend/src/server.js",
+    "dev:backend": "node backend/src/server.js",
+    "dev:frontend": "npm run dev --prefix frontend"
+  },
+  "keywords": [
+    "network-mapping",
+    "patch-panel",
+    "switch-management",
+    "vlan",
+    "dcim"
+  ],
   "author": "Phoenix",
   "license": "MIT"
 }
