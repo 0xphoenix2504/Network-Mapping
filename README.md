@@ -27,11 +27,6 @@ node backend/src/server.js
    * بحث شامل بأي حقل (رقم النقطة `Drop_ID`، الغرفة، الموظف، السويتش، البورت، الـ IP، أو الـ VLAN).
    * فلاتر متعددة للأدوار، الراكات، السويتشات، وحالة النقطة.
 
-2. **كارت التتبع البصري الكامل (End-to-End Visual Trace):**
-   * عرض مسار النقطة بالكامل بنقرة زر واحدة:
-     $$\text{Wall Outlet} \longrightarrow \text{Patch Panel (Port)} \longrightarrow \text{Patch Cord} \longrightarrow \text{Switch (Port \& VLAN)} \longrightarrow \text{Device}$$
-   * إمكانية نسخ ملخص المسار بنقرة واحدة لتسهيل التواصل مع فرق الصيانة.
-
 3. **مصفوفة البورتات المرئية (Interactive Port Matrix):**
    * محاكاة بصرية لمصفوفة بورتات الـ Patch Panels والسويتشات (24 و 48 بورت).
    * إضاءات حالة البورت بألوان معتمدة:
